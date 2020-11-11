@@ -6,13 +6,26 @@ html, body {
 }
 
 @media (min-width: 800px) {
+  body {
+    display: grid;
+  }
+  body #bg-curve {
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    width: 75%;
+  }
   body #test {
     display: grid;
     height: 100%;
     width: 100%;
     position: absolute;
-    min-width: 980px;
+    min-width: 880px;
     min-height: 670px;
+    max-width: 1600px;
+    max-height: 1000px;
+    align-self: center;
+    justify-self: center;
   }
   body #test #photo-container {
     -webkit-user-select: none;
@@ -143,13 +156,8 @@ html, body {
     position: absolute;
     z-index: 15;
   }
-  body #test #testimonial-container #bg-curve, body #test #testimonial-container #bg-quote {
+  body #test #testimonial-container #bg-quote {
     position: absolute;
-  }
-  body #test #testimonial-container #bg-curve {
-    bottom: 0%;
-    left: 0%;
-    width: 75%;
   }
   body #test #testimonial-container #bg-quote {
     top: 26.6%;
@@ -213,6 +221,12 @@ html, body {
   }
 }
 @media (max-width: 800px) {
+  body #bg-curve {
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    width: 75%;
+  }
   body #test {
     display: grid;
     overflow: hidden;
@@ -356,7 +370,7 @@ html, body {
     justify-items: center;
     z-index: 1;
   }
-  body #test #testimonial-container #bg-curve, body #test #testimonial-container #bg-quote {
+  body #test #testimonial-container #bg-quote {
     position: absolute;
   }
   body #test #testimonial-container #bg-curve {

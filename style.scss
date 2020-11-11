@@ -19,13 +19,27 @@ html, body {
 
 @media (min-width: 800px) {
     body {
+        display: grid;
+
+        #bg-curve {
+            position: absolute;
+            bottom: 0%;
+            left: 0%;
+            width: 75%;
+        }
+
+ 
         #test {
             display: grid;
             height: 100%;
             width: 100%;
             position: absolute;
-            min-width: 980px;
+            min-width: 880px;
             min-height: 670px;
+            max-width: 1600px;
+            max-height: 1000px;
+            align-self: center;
+            justify-self: center;
 
         #photo-container {
             @include user-select(none);
@@ -168,14 +182,8 @@ html, body {
             position: absolute;
             z-index: 15;
 
-            #bg-curve, #bg-quote {
+            #bg-quote {
                 position: absolute;
-            }
-
-            #bg-curve {
-                bottom: 0%;
-                left: 0%;
-                width: 75%;
             }
 
             #bg-quote {
@@ -255,7 +263,14 @@ html, body {
 
 @media (max-width: 800px) {
     body {
-        #test {
+        #bg-curve {
+            position: absolute;
+            bottom: 0%;
+            left: 0%;
+            width: 75%;
+        }
+
+       #test {
         display: grid;
         overflow: hidden;
         min-height: 667px;
@@ -409,7 +424,7 @@ html, body {
             justify-items: center;
             z-index: 1;
 
-            #bg-curve, #bg-quote {
+            #bg-quote {
                 position: absolute;
             }
 
