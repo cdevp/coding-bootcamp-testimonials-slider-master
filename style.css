@@ -5,11 +5,16 @@ html, body {
   width: 100%;
 }
 
-@media (min-width: 1050px) and (min-height: 550px) {
-  body {
-    display: flex;
+@media (min-width: 800px) {
+  body #test {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    min-width: 980px;
+    min-height: 670px;
   }
-  body #photo-container {
+  body #test #photo-container {
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -19,15 +24,17 @@ html, body {
     bottom: 18.4%;
     display: flex;
     width: 37.5%;
+    min-width: 450px;
+    justify-self: center;
   }
-  body #photo-container #bg-pattern {
+  body #test #photo-container #bg-pattern {
     position: absolute;
     right: -17%;
     bottom: -10.2%;
     width: 129.1%;
     z-index: 2;
   }
-  body #photo-container #photo-1 {
+  body #test #photo-container #photo-1 {
     display: block;
     position: relative;
     right: 0%;
@@ -35,7 +42,7 @@ html, body {
     border-radius: 6px;
     z-index: 3;
   }
-  body #photo-container #photo-2 {
+  body #test #photo-container #photo-2 {
     display: none;
     position: relative;
     right: 0%;
@@ -43,7 +50,7 @@ html, body {
     border-radius: 6px;
     z-index: 3;
   }
-  body #photo-container #shadow {
+  body #test #photo-container #shadow {
     position: absolute;
     bottom: 0%;
     width: 100%;
@@ -51,7 +58,7 @@ html, body {
     height: 88%;
     z-index: 1;
   }
-  body #photo-container #nav-buttons {
+  body #test #photo-container #nav-buttons {
     position: absolute;
     display: grid;
     grid-template-rows: 1fr;
@@ -67,19 +74,22 @@ html, body {
     box-shadow: 0px 10px 30px -3px #babacf;
     z-index: 5;
   }
-  body #photo-container #nav-buttons #next-arrow {
+  body #test #photo-container #nav-buttons #mobile-next-arrow, body #test #photo-container #nav-buttons #mobile-prev-arrow {
+    display: none;
+  }
+  body #test #photo-container #nav-buttons #next-arrow {
     cursor: pointer;
     grid-row: 1;
     grid-column: 2;
     z-index: 10;
   }
-  body #photo-container #nav-buttons #prev-arrow {
+  body #test #photo-container #nav-buttons #prev-arrow {
     cursor: pointer;
     grid-row: 1;
     grid-column: 1;
     z-index: 10;
   }
-  body #photo-container #nav-buttons #prev-bg {
+  body #test #photo-container #nav-buttons #prev-bg {
     cursor: pointer;
     position: absolute;
     grid-row: 1;
@@ -91,7 +101,7 @@ html, body {
     background-color: white;
     z-index: 9;
   }
-  body #photo-container #nav-buttons #next-bg {
+  body #test #photo-container #nav-buttons #next-bg {
     cursor: pointer;
     position: absolute;
     grid-row: 1;
@@ -102,19 +112,25 @@ html, body {
     background-color: white;
     z-index: 9;
   }
-  body #photo-container #nav-buttons #prev-bg:hover {
+  body #test #photo-container #nav-buttons #prev-bg:hover {
     background-color: #5345da;
   }
-  body #photo-container #nav-buttons #prev-bg:active {
+  body #test #photo-container #nav-buttons #prev-bg:active {
     background-color: #5345da;
   }
-  body #photo-container #nav-buttons #next-bg:hover {
+  body #test #photo-container #nav-buttons #prev-arrow:hover ~ #prev-bg {
     background-color: #5345da;
   }
-  body #photo-container #nav-buttons #next-bg:active {
+  body #test #photo-container #nav-buttons #next-bg:hover {
     background-color: #5345da;
   }
-  body #testimonial-container {
+  body #test #photo-container #nav-buttons #next-bg:active {
+    background-color: #5345da;
+  }
+  body #test #photo-container #nav-buttons #next-arrow:hover ~ #next-bg {
+    background-color: #5345da;
+  }
+  body #test #testimonial-container {
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -127,53 +143,54 @@ html, body {
     position: absolute;
     z-index: 15;
   }
-  body #testimonial-container #bg-curve, body #testimonial-container #bg-quote {
+  body #test #testimonial-container #bg-curve, body #test #testimonial-container #bg-quote {
     position: absolute;
   }
-  body #testimonial-container #bg-curve {
+  body #test #testimonial-container #bg-curve {
     bottom: 0%;
     left: 0%;
     width: 75%;
   }
-  body #testimonial-container #bg-quote {
+  body #test #testimonial-container #bg-quote {
     top: 26.6%;
     left: 34%;
     width: 14.9%;
+    min-width: 140px;
   }
-  body #testimonial-container #testimonial-text-1 {
+  body #test #testimonial-container #testimonial-text-1 {
     display: block;
     grid-row: 2;
     grid-column: 2;
     font-weight: 300;
     line-height: 1.3rem;
   }
-  body #testimonial-container #testimonial-text-2 {
+  body #test #testimonial-container #testimonial-text-2 {
     display: none;
     grid-row: 2;
     grid-column: 2;
     font-weight: 300;
     line-height: 1.3rem;
   }
-  body #testimonial-container #testimonial-subtext {
+  body #test #testimonial-container #testimonial-subtext {
     grid-row: 3;
     grid-column: 2;
     font-size: 0.61rem;
   }
-  body #testimonial-container #testimonial-subtext #testimonial-name-1 {
+  body #test #testimonial-container #testimonial-subtext #testimonial-name-1 {
     display: inline-block;
     font-weight: 700;
   }
-  body #testimonial-container #testimonial-subtext #testimonial-rank-1 {
+  body #test #testimonial-container #testimonial-subtext #testimonial-rank-1 {
     display: inline-block;
     padding-left: 0.14rem;
     color: #babacf;
     font-weight: 500;
   }
-  body #testimonial-container #testimonial-subtext #testimonial-name-2 {
+  body #test #testimonial-container #testimonial-subtext #testimonial-name-2 {
     display: none;
     font-weight: 700;
   }
-  body #testimonial-container #testimonial-subtext #testimonial-rank-2 {
+  body #test #testimonial-container #testimonial-subtext #testimonial-rank-2 {
     display: none;
     padding-left: 0.14rem;
     color: #babacf;
@@ -193,6 +210,221 @@ html, body {
 @media (max-width: 1199px) {
   #testimonial-text-1, #testimonial-text-2 {
     font-size: 0.7rem;
+  }
+}
+@media (max-width: 800px) {
+  body #test {
+    display: grid;
+    overflow: hidden;
+    min-height: 667px;
+    min-width: 375px;
+    max-width: 700px;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
+  body #test #photo-container {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    position: absolute;
+    justify-self: center;
+    top: 8%;
+    display: flex;
+    width: 68.5%;
+    max-width: 450px;
+  }
+  body #test #photo-container #bg-pattern {
+    position: absolute;
+    right: -13.6%;
+    bottom: -9%;
+    width: 127%;
+    z-index: 2;
+  }
+  body #test #photo-container #photo-1 {
+    display: block;
+    position: relative;
+    left: 0.5%;
+    width: 99.3%;
+    border-radius: 6px;
+    z-index: 3;
+  }
+  body #test #photo-container #photo-2 {
+    display: none;
+    position: relative;
+    left: 0.5%;
+    width: 99.3%;
+    border-radius: 6px;
+    z-index: 3;
+  }
+  body #test #photo-container #shadow {
+    display: flex;
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    box-shadow: 2px 38px 30px -21px #babacf;
+    height: 88%;
+    z-index: 1;
+  }
+  body #test #photo-container #nav-buttons {
+    position: absolute;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    left: 34.5%;
+    bottom: -7.5%;
+    height: 15.8%;
+    width: 31.5%;
+    border-radius: 20px;
+    box-shadow: 0px 17px 23px -11px #babacf;
+    z-index: 5;
+  }
+  body #test #photo-container #nav-buttons #next-arrow, body #test #photo-container #nav-buttons #prev-arrow {
+    display: none;
+  }
+  body #test #photo-container #nav-buttons #mobile-next-arrow {
+    cursor: pointer;
+    grid-row: 1;
+    grid-column: 2;
+    width: 24%;
+    z-index: 10;
+    padding-left: 3%;
+  }
+  body #test #photo-container #nav-buttons #mobile-prev-arrow {
+    cursor: pointer;
+    grid-row: 1;
+    grid-column: 1;
+    width: 22.5%;
+    z-index: 10;
+    padding-right: 5%;
+  }
+  body #test #photo-container #nav-buttons #prev-bg {
+    cursor: pointer;
+    position: absolute;
+    grid-row: 1;
+    grid-column: 1;
+    left: 0%;
+    height: 100%;
+    width: 50%;
+    border-radius: 30px 0px 0px 30px;
+    background-color: white;
+    z-index: 9;
+  }
+  body #test #photo-container #nav-buttons #next-bg {
+    cursor: pointer;
+    position: absolute;
+    grid-row: 1;
+    grid-column: 2;
+    height: 100%;
+    width: 100%;
+    border-radius: 0px 30px 30px 0px;
+    background-color: white;
+    z-index: 9;
+  }
+  body #test #photo-container #nav-buttons #prev-bg:hover {
+    background-color: #5345da;
+  }
+  body #test #photo-container #nav-buttons #prev-bg:active {
+    background-color: #5345da;
+  }
+  body #test #photo-container #nav-buttons #mobile-prev-arrow:hover ~ #prev-bg {
+    background-color: #5345da;
+  }
+  body #test #photo-container #nav-buttons #next-bg:hover {
+    background-color: #5345da;
+  }
+  body #test #photo-container #nav-buttons #next-bg:active {
+    background-color: #5345da;
+  }
+  body #test #photo-container #nav-buttons #mobile-next-arrow:hover ~ #next-bg {
+    background-color: #5345da;
+  }
+  body #test #testimonial-container {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    display: grid;
+    grid-template-rows: 58.4% 24.3% 1fr;
+    grid-template-columns: 9% 1fr 10%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    justify-items: center;
+    z-index: 1;
+  }
+  body #test #testimonial-container #bg-curve, body #test #testimonial-container #bg-quote {
+    position: absolute;
+  }
+  body #test #testimonial-container #bg-curve {
+    bottom: 0%;
+    left: 0%;
+    width: 75%;
+  }
+  body #test #testimonial-container #bg-quote {
+    bottom: 38.1%;
+    width: 16.1%;
+  }
+  body #test #testimonial-container #testimonial-text-1 {
+    display: block;
+    grid-row: 2;
+    grid-column: 2;
+    text-align: center;
+    font-size: 0.556rem;
+    font-weight: 300;
+    line-height: 0.75rem;
+  }
+  body #test #testimonial-container #testimonial-text-2 {
+    display: none;
+    grid-row: 2;
+    grid-column: 2;
+    text-align: center;
+    font-size: 0.556rem;
+    font-weight: 300;
+    line-height: 0.75rem;
+  }
+  body #test #testimonial-container #testimonial-subtext {
+    grid-row: 3;
+    grid-column: 2;
+    font-size: 0.47rem;
+    line-height: 0.6rem;
+  }
+  body #test #testimonial-container #testimonial-subtext #testimonial-name-1 {
+    display: block;
+    text-align: center;
+    font-weight: 700;
+  }
+  body #test #testimonial-container #testimonial-subtext #testimonial-rank-1 {
+    display: block;
+    padding-top: 0.04rem;
+    text-align: center;
+    color: #babacf;
+    font-weight: 500;
+  }
+  body #test #testimonial-container #testimonial-subtext #testimonial-name-2 {
+    display: none;
+    text-align: center;
+    font-weight: 700;
+  }
+  body #test #testimonial-container #testimonial-subtext #testimonial-rank-2 {
+    display: none;
+    padding-top: 0.04rem;
+    text-align: center;
+    color: #babacf;
+    font-weight: 500;
+  }
+}
+@media (max-height: 700px) and (max-width: 800px) {
+  body #test #photo-container {
+    max-width: 300px;
+  }
+}
+@media (min-height: 700px) and (max-width: 800px) {
+  body #test #photo-container {
+    max-width: 320px;
   }
 }
 

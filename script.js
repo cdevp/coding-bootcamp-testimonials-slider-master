@@ -6,6 +6,15 @@ const name1 = document.getElementById('testimonial-name-1');
 const name2 = document.getElementById('testimonial-name-2');
 const rank1 = document.getElementById('testimonial-rank-1');
 const rank2 = document.getElementById('testimonial-rank-2');
+const mobileCheck = document.getElementById('mobile-prev-arrow');
+var nameRankStyle = '';
+
+if (mobileCheck.style.display !== 'none') {
+    nameRankStyle = 'block';
+}
+else {
+    nameRankStyle = 'inline-block';
+}
 
 function next() {
     console.log('next');
@@ -15,9 +24,9 @@ function next() {
         test1.style.display = 'none';
         test2.style.display = 'block';
         name1.style.display = 'none';
-        name2.style.display = 'inline-block';
+        name2.style.display = nameRankStyle;
         rank1.style.display = 'none';
-        rank2.style.display = 'inline-block';
+        rank2.style.display = nameRankStyle;
     }
     else {
         alert('There are no more testimonials left');
@@ -32,9 +41,9 @@ function prev() {
         test2.style.display = 'none';
         test1.style.display = 'block';
         name2.style.display = 'none';
-        name1.style.display = 'inline-block';
+        name1.style.display = nameRankStyle;
         rank2.style.display = 'none';
-        rank1.style.display = 'inline-block';
+        rank1.style.display = nameRankStyle;
     }
     else {
         alert('This is the first testimonial');
@@ -43,6 +52,8 @@ function prev() {
 
 
 document.getElementById('next-bg').addEventListener('click', next);
-document.getElementById('next-arrow').addEventListener('click', next);
 document.getElementById('prev-bg').addEventListener('click', prev);
+document.getElementById('mobile-next-arrow').addEventListener('click', next);
+document.getElementById('mobile-prev-arrow').addEventListener('click', prev);
 document.getElementById('prev-arrow').addEventListener('click', prev);
+document.getElementById('next-arrow').addEventListener('click', next);
